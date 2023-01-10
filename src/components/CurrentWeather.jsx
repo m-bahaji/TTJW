@@ -9,6 +9,9 @@ export default function Weather() {
     if (city === null || city === "") {
       return;
     }
+
+    //you can put these in your .env File
+    
     const apiKey = "854e09de099a5dd32d428062a572a45f";
     const unit = "metric";
     const lang = "de";

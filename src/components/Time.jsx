@@ -16,6 +16,7 @@ export default function Time(props) {
       <div className="heading">
         <h1>Current Time</h1>
       </div>
+      {/* use font-size, h1 is just for heading*/}
       <h1>{time}</h1>
     </div>
   );
