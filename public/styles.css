@@ -110,12 +110,23 @@ li {
   box-shadow: 4px 3px 7px 2px #00000040;
   padding: 1rem;
   box-sizing: border-box;
-  margin-left: 50px;
+  margin-left: 40px;
 }
 /* Container Style für Joke App */
 .custom-container-Joke {
   width: 370px;
   height: 469px;
+  background: #f1f5f8;
+  background-size: 25px 25px;
+  border-radius: 20px;
+  box-shadow: 4px 3px 7px 2px #00000040;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+/* Container Style für Heading App */
+.custom-container-heading {
+  width: 1473px;
+  height: 60px;
   background: #f1f5f8;
   background-size: 25px 25px;
   border-radius: 20px;
@@ -140,7 +151,7 @@ li {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.6fr 1.4fr 1fr;
+  grid-template-rows: 0.6fr 1.4fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
