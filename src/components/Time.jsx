@@ -14,8 +14,10 @@ export default function Time(props) {
   return (
     <div className="custom-container-Time Time">
       <div className="heading">
+        {/* NOTE: Avoid multiple h1 on one page (semantics) */}
         <h1>Current Time</h1>
       </div>
+      {/* NOTE: Avoid multiple h1 on one page (semantics), see the above */}
       <h1>{time}</h1>
     </div>
   );

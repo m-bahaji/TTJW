@@ -25,6 +25,11 @@ export default function App() {
 
   function deleteItem(id) {
     setItems((prevItems) => {
+      /**
+       * NOTE: In general you should not filter an array based on an index as the index is prone to chagne.
+       * Define how an item looks, for example a task has a title (your string) and an unique identifier (taskId)(task as object)
+       * If you then filter, you can compare id and taskId which makes the code more reliable.
+       */
       return prevItems.filter((item, index) => {
         return index !== id;
       });
