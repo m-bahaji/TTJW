@@ -7,7 +7,7 @@ export default function Joke() {
     const APIJOKE =
       "https://v2.jokeapi.dev/joke/Any?lang=de&blacklistFlags=racist&type=single&idRange=0-25";
 
-    // NOTE: YOu are using promise chaining, a rabbit hole to look into is async await vs fetch ;)
+    // NOTE: You are using promise chaining, a rabbit hole to look into is async await vs promise ;)
     fetch(APIJOKE)
       .then((response) => response.json())
       .then((data) => {
