@@ -38,6 +38,13 @@ export default function App() {
     setButtonColor(false);
   }
 
+  function mouseOver() {
+    setButtonColor(true);
+  }
+  function mouseOut() {
+    setButtonColor(false);
+  }
+
   return (
     <div>
       <div className="heading custom-container-heading">
@@ -81,3 +88,50 @@ export default function App() {
     </div>
   );
 }
+  /*
+  First point here is regarding the mouseOver JS events
+
+  This is a totally acceptable way of adjusting the styles,
+  but a more simple method would be to use the css :hover attribute
+   
+  This will require relocating the inline css to a class and then
+  using a className on the button. 
+
+  For example
+  .myButton {
+    backgroundColor: transparent;
+  }
+
+  .myButton:hover {
+    background-color: black;
+  }
+
+  This would save a lot of lines of code, as you would then have a
+  reusable button style for each button in the app.
+
+  Which bings us to point 2
+  There are multiple buttons all with the same qualities here.
+  They could each be replaced with a shared <MyButton /> component.
+  This component would share the CSS, or in this case the bg-color
+  functionality for mouseOver, while receving a text and onClick
+  prop from the parent component where it is implemented.
+
+  The whole TODO list on this file can be it's own component as well
+  like how the Time, Joke and Current Weather components are.
+  
+
+  Small final point, the functionality of deleting a list item should
+  be changed.
+  In this specific case, you will probably get away with it, but 
+  generally, filtering an array by the index position can cause issues
+  down the road.
+  A more safe way of doing this in this instance would be to use a 
+  dictionary of key value pairs, where you can reference the key of
+  a value that needs to be removed, instead of an index in an array
+  which could mutate under more complex circumstances.
+  The key will always be unique and specific to the value, regardless
+  of where its "position" might be in the dictionary, whereas an array
+  item index can be populated by any value, and when removed, all values
+  afterwards will shift back into the empty positions.
+  ( let me know if more clarification needed on this )
+  */

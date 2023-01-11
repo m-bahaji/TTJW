@@ -20,3 +20,5 @@ export default function Time(props) {
     </div>
   );
 }
+
+// Clean, nice 👍
