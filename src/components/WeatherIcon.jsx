@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 export default function WeatherIcon(props) {
-  const [imageUrl, setImageUrl] = useState("");
+  const weatherIconImage = `https://openweathermap.org/img/wn/${props.weatherIcon}@2x.png`;
 
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch(props.src);
-      setImageUrl(response.url);
-    }
-    fetchData();
-  }, [props.src]);
-
-  const finalURL = imageUrl + props.weatherIcon + "@2x.png";
-  return <img className="iconSize rcorners1" src={finalURL} alt="icon"></img>;
+  return (
+    <img className="iconSize rcorners1" src={weatherIconImage} alt="icon"></img>
+  );
 }

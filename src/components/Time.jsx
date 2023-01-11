@@ -16,7 +16,7 @@ export default function Time(props) {
       <div className="heading">
         <h1>Current Time</h1>
       </div>
-      <h1>{time}</h1>
+      <p style={{fontSize:"2rem"}}>{time}</p>
     </div>
   );
 }

@@ -27,7 +27,6 @@ export default function App() {
   function deleteItem(id) {
     setItems((prevItems) => {
       return prevItems.filter((item, index) => {
-        console.log(prevItems);
         return index !== id;
       });
     });

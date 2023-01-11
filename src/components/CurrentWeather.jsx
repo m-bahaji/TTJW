@@ -68,7 +68,6 @@ export default function Weather() {
           <div>
             <WeatherIcon
               weatherIcon={weather.weather[0].icon}
-              src="https://openweathermap.org/img/wn/"
             />
           </div>
           <h2>Windgeschwindigkeit: {weather.wind.speed}m/s</h2>
