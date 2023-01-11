@@ -10,7 +10,7 @@ export default function Weather() {
     if (city === null || city === "") {
       return;
     }
-    const apiKey = process.env.REACT_APP_API_KEY;
+    const apiKey = process.env.REACT_APP_WEATHER_KEY;
     const unit = "metric";
     const lang = "de";
     // const apiUrl =
@@ -27,7 +27,8 @@ export default function Weather() {
       .then((response) => response.json())
       .then((data) => {
         if (data.cod === "404") {
-          return;
+          alert("invalid city input");
+          throw new Error("Error 404");
         } else {
           setWeather(data);
         }
@@ -66,9 +67,7 @@ export default function Weather() {
           <h2>Temperatur: {weather.main.temp} C</h2>
           <h2> {weather.weather[0].description}</h2>
           <div>
-            <WeatherIcon
-              weatherIcon={weather.weather[0].icon}
-            />
+            <WeatherIcon weatherIcon={weather.weather[0].icon} />
           </div>
           <h2>Windgeschwindigkeit: {weather.wind.speed}m/s</h2>
         </div>
