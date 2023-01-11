@@ -44,3 +44,9 @@ export default function Joke(props) {
     </div>
   );
 }
+
+/*
+  All fine here, only thing to note is stuff that has already been commented upon
+  Error handling and a making a specific button component.
+  Otherwise perfect
+*/

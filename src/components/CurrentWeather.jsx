@@ -76,3 +76,12 @@ export default function Weather() {
     </div>
   );
 }
+
+/*
+  Very nicely put together
+  Top marks for not putting the API key hardcoded, but using an env to keep it safe
+  The only addition I would suggest is some error handling to convey to the user
+  when no output is coming, instead of just `return` from the fetch function.
+  Even just an alert("request timed out") or something simple like this.
+  Always useful for users to get feedback in all situations.
+*/
