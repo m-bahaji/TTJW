@@ -179,3 +179,7 @@ li {
 .Current-Weather {
   grid-area: Current-Weather;
 }
+
+button:hover {
+  background-color: black;
+}

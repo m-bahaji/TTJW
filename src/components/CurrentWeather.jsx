@@ -4,7 +4,6 @@ import WeatherIcon from "./WeatherIcon";
 export default function Weather() {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
-  const [buttonColor, setButtonColor] = useState(false);
 
   function handleClick() {
     if (city === null || city === "") {
@@ -34,12 +33,7 @@ export default function Weather() {
         }
       });
   }
-  function mouseOver() {
-    setButtonColor(true);
-  }
-  function mouseOut() {
-    setButtonColor(false);
-  }
+
 
   return (
     <div className="custom-container-Weather form Current-Weather">
@@ -53,11 +47,6 @@ export default function Weather() {
         onChange={(event) => setCity(event.target.value)}
       ></input>
       <button
-        onMouseOver={mouseOver}
-        onMouseOut={mouseOut}
-        style={{
-          backgroundColor: buttonColor === true ? "black" : "transparent",
-        }}
         onClick={handleClick}
       >
         <span>Go!</span>

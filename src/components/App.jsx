@@ -7,7 +7,6 @@ import Joke from "./Joke";
 export default function App() {
   const [inputText, setInputText] = useState("");
   const [items, setItems] = useState([]);
-  const [buttonColor, setButtonColor] = useState(false);
 
   function handleChange(event) {
     const newValue = event.target.value;
@@ -31,12 +30,7 @@ export default function App() {
       });
     });
   }
-  function mouseOver() {
-    setButtonColor(true);
-  }
-  function mouseOut() {
-    setButtonColor(false);
-  }
+
 
   return (
     <div>
@@ -51,11 +45,7 @@ export default function App() {
           <div className="form">
             <input onChange={handleChange} type="text" value={inputText} />
             <button
-              style={{
-                backgroundColor: buttonColor === true ? "black" : "transparent",
-              }}
-              onMouseOut={mouseOut}
-              onMouseOver={mouseOver}
+
               onClick={addItem}
             >
               <span>Hinzufügen</span>
